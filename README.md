@@ -45,5 +45,5 @@ func main() {
 ```
 
 ## References
-For the Gob portion of this example I use the following site as a reference,
+For the Gob portion of this example, I used the following site as a reference
 * https://appliedgo.net/networking/
