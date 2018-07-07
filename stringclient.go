@@ -5,15 +5,15 @@ import (
     "github.com/Piszmog/tcp-example/client"
 )
 
-type StringClient struct {
+type StringClientHandler struct {
 }
 
-func (stringClient *StringClient) SendMessages(readWriter *bufio.ReadWriter) {
+func (handler *StringClientHandler) SendMessages(readWriter *bufio.ReadWriter) {
     readWriter.WriteString("Hello\n")
     readWriter.WriteString("Again\n")
 }
 
 func main() {
-    var handler StringClient
+    var handler StringClientHandler
     client.StartClient(&handler)
 }

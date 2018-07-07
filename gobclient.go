@@ -7,10 +7,10 @@ import (
     "github.com/Piszmog/tcp-example/client"
 )
 
-type GobClient struct {
+type GobClientHandler struct {
 }
 
-func (gobClient *GobClient) SendMessages(readWriter *bufio.ReadWriter) {
+func (handler *GobClientHandler) SendMessages(readWriter *bufio.ReadWriter) {
     testStruct := model.ComplexData{
         N: 23,
         S: "string data",
@@ -27,6 +27,6 @@ func (gobClient *GobClient) SendMessages(readWriter *bufio.ReadWriter) {
 }
 
 func main() {
-    var handler GobClient
+    var handler GobClientHandler
     client.StartClient(&handler)
 }
