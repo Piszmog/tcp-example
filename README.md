@@ -31,16 +31,16 @@ To create a client and to send data to the server, a handler that implements `cl
 
 Example,
 ```go
+func main() {
+    var handler ExampleClientHandler
+    client.StartClient(&handler)
+}
+
 type ExampleClientHandler struct {
 }
 
 func (handler *ExampleClientHandler) SendMessages(readWriter *bufio.ReadWriter) {
     ...
-}
-
-func main() {
-    var handler ExampleClientHandler
-    client.StartClient(&handler)
 }
 ```
 
