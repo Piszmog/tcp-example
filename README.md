@@ -53,4 +53,8 @@ To use the private key and public certificate, instead of using `server.StartSer
 
 ## References
 * https://appliedgo.net/networking/
+  * insecure tcp server and client
 * http://pascal.bach.ch/2015/12/17/from-tcp-to-tls-in-go/
+  * tls server and client
+* https://ericchiang.github.io/post/go-tls/
+  * generation of private key and public cert

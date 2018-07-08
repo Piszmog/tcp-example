@@ -14,7 +14,7 @@ import (
     "fmt"
 )
 
-// Generation comes from http://pascal.bach.ch/2015/12/17/from-tcp-to-tls-in-go/ as a guide to creating private key
+// Generation comes from https://ericchiang.github.io/post/go-tls/ as a guide to creating private key
 // and public certificate
 func main() {
     rootKey, err := rsa.GenerateKey(rand.Reader, 2048)
