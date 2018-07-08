@@ -45,7 +45,7 @@ func (handler *ExampleClientHandler) SendMessages(readWriter *bufio.ReadWriter) 
 ```
 
 ## TLS Server/Client
-To create a secure server and to allow a client to connect to it, the `crtgenerator` can be ran to generate a private key and 
+To create a secure server and to allow a client to connect to it, the `certgenerator` can be ran to generate a private key and 
 a public certificate.
 
 To use the private key and public certificate, instead of using `server.StartServer(..)` and `client.StartClient(..)` use 
