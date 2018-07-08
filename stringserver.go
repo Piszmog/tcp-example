@@ -10,7 +10,10 @@ import (
 
 func main() {
     var handler StringHandler
+    // creating an insecure server
     server.StartServer(&handler)
+    // creating a secure server
+    //server.StartTLSServer(cert.PrivateKey, cert.PublicCertificate, &handler)
 }
 
 type StringHandler struct {

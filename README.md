@@ -44,6 +44,13 @@ func (handler *ExampleClientHandler) SendMessages(readWriter *bufio.ReadWriter) 
 }
 ```
 
+## TLS Server/Client
+To create a secure server and to allow a client to connect to it, the `crtgenerator` can be ran to generate a private key and 
+a public certificate.
+
+To use the private key and public certificate, instead of using `server.StartServer(..)` and `client.StartClient(..)` use 
+`server.StartTLSServer(..)` and `client.StartTLSClient(..)`.
+
 ## References
-For the Gob portion of this example, I used the following site as a reference
 * https://appliedgo.net/networking/
+* http://pascal.bach.ch/2015/12/17/from-tcp-to-tls-in-go/

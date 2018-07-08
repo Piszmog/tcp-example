@@ -1,9 +1,17 @@
 package main
 
 import (
-    "bufio"
     "github.com/Piszmog/tcp-example/client"
+    "bufio"
 )
+
+func main() {
+    var handler StringClientHandler
+    // connecting to an insecure server
+    client.StartClient(&handler)
+    // connecting to a secure server
+    //client.StartTLSClient(cert.PublicCertificate, &handler)
+}
 
 type StringClientHandler struct {
 }
@@ -11,9 +19,4 @@ type StringClientHandler struct {
 func (handler *StringClientHandler) SendMessages(readWriter *bufio.ReadWriter) {
     readWriter.WriteString("Hello\n")
     readWriter.WriteString("Again\n")
-}
-
-func main() {
-    var handler StringClientHandler
-    client.StartClient(&handler)
 }
